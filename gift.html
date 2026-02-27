@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Gift</title>
+        <link rel="stylesheet" href="gift.css">
+        <link rel="icon" type="image/png" href="photos-gallery/icon.png">
+    </head>
+    <body>
+        <header class="topbar">
+            <nav class="nav-links">
+              <a href="main.html"><b>Home</b></a>
+              <a href="about.html"><b>Read</b></a>
+              <a href="gallery.html"><b>Gallery</b></a>
+              <a href="gift.html"><b>Gift</b></a>
+            </nav>
+          </header>
+
+          <div class="gift-page">
+            <div class="flip-card giftCard" role="button" tabindex="0" aria-label="Open gift card">
+              <div class="flip-inner">
+        
+                <!-- FRONT -->
+                <div class="flip-front">
+                  <h1 class="gift-title">Tap to Open</h1>
+                  <p class="gift-subtitle">This one didn’t cost me anything this time.
+                    <br>
+                    I didn’t purchase it. I made it because that matters more to me and as well as to you.<br>
+                    Not everyone knows that white roses are for special ones.</p>
+                </div>
+        
+                <!-- BACK -->
+                <div class="flip-back">
+                  <img class="gift-image" src="photos-gallery/white_roses_gift.png" alt="Gift photo" />
+                </div>
+        
+              </div>
+            </div>
+            <div class="flip-card giftCard" role="button" tabindex="0" aria-label="Open gift card">
+                <div class="flip-inner">
+          
+                  <!-- FRONT -->
+                  <div class="flip-front">
+                    <h1 class="gift-title">Tap to Open/ Gift No. 2</h1>
+                    <p class="gift-subtitle">Always remember, if I say something, I will do it.
+                      <br>
+                      It cost me too much, I have talked to so many legal people, prime ministers and so on
+                      , but finally here is your .....</p>
+                  </div>
+          
+                  <!-- BACK -->
+                  <div class="flip-back">
+                    <img class="gift-image" src="photos-gallery/residence-permit-ren.png" alt="Gift photo" />
+                  </div>
+          
+                </div>
+              </div>
+          </div>
+          <script>
+            document.querySelectorAll(".giftCard").forEach((card) => {
+            card.addEventListener("click", () => {
+            card.classList.toggle("is-flipped");
+            });
+
+            card.addEventListener("keydown", (e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+                card.classList.toggle("is-flipped");
+                }
+            });
+            });
+          </script>
+    </body>
+</html>
