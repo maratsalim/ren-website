@@ -132,6 +132,9 @@ body{
 .seventh-line{
     display:flex;
 }
+.eigth-line{
+    display:flex;
+}
 .caption{
     width:150px;
     text-align:center;
