@@ -269,3 +269,63 @@ body {
     transition: opacity 0.5s ease;
   }
   
+  .cheer-layer{
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 9999;
+    display: grid;
+    place-items: center;
+  }
+  
+  .cheer-banner{
+    pointer-events: none;
+    padding: 18px 22px;
+    border-radius: 18px;
+    background: rgba(0,0,0,0.72);
+    color: #fff;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 26px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+    transform: translateY(-10px);
+    animation: popIn 450ms ease-out forwards;
+  }
+  
+  .cheer-sub{
+    margin-top: 8px;
+    font-weight: 400;
+    font-size: 14px;
+    opacity: 0.9;
+  }
+  
+  @keyframes popIn{
+    from { opacity: 0; transform: translateY(-18px) scale(0.96); }
+    to   { opacity: 1; transform: translateY(-10px) scale(1); }
+  }
+  
+  /* Floating emojis/balloons */
+  .floaties{
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+  }
+  
+  .floaty{
+    position: absolute;
+    font-size: 26px;
+    opacity: 0.95;
+    animation: floatUp linear forwards;
+    filter: drop-shadow(0 6px 10px rgba(0,0,0,0.15));
+  }
+  
+  @keyframes floatUp{
+    from { transform: translateY(110vh) rotate(0deg); opacity: 0; }
+    10%  { opacity: 1; }
+    to   { transform: translateY(-20vh) rotate(360deg); opacity: 0; }
+  }
+
+.cheer-layer { z-index: 9998; }     /* behind */
+.letter-overlay { z-index: 9999; } 
+.site-hidden { display: none; }
