@@ -55,7 +55,7 @@ body {
     margin: 0;
 }
 .explanation{
-    margin-left:42px;
+    text-align:center;
     font-size:25px;
     font-weight: bold;
 }
