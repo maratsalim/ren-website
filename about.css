@@ -1,0 +1,118 @@
+body{
+   background-color: rgba(249, 199, 208, 0.862);
+   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.topbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    height: 64px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    padding: 0 32px;
+
+    background: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* Topbar link */
+.topbar a {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+
+    text-decoration: none;
+    color: #333;
+
+    padding: 8px 16px;
+    border-radius: 999px;
+
+    line-height: 1; 
+
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.topbar a:hover {
+    background: rgba(249, 199, 208, 0.8);
+    transform: translateY(-1px);
+}
+.about-text{
+    margin: 0;
+}
+.explanation{
+    text-align:center;
+    font-size:25px;
+    font-weight: bold;
+}
+
+.quote-box {
+    width: min(1420px, 95%);
+    margin: 0 auto;
+    padding: 25px 35px;
+
+    border: 1.5px solid rgba(249, 199, 208, 0.9);
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+    display: block;
+    text-align: left;
+    min-height: 120px; 
+}
+.quote-box-lyrics{
+    width: min(1420px, 95%);
+    min-height: 120px;
+    margin: 0 auto;
+    padding: 25px 35px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+
+    border: 1.5px solid rgba(249, 199, 208, 0.9);
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+.english-lyrics,
+.turkish-lyrics,
+.russian-lyrics{
+    flex: 1;
+}
+
+.quote-section{
+    padding: 30px 20px;
+    margin: 0 auto;
+}
+#quote-text {
+    font-family: 'Pacifico', cursive;
+    font-size: 22px;
+    font-style: italic;
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto;
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+
+.process{
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
