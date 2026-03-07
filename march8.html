@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>8 March</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="march8.css">
+    <link rel="icon" type="image/png" href="photos-gallery/icon.png">
+</head>
+<body>
+
+<header class="topbar">
+    <a href="index.html"><b>Home</b></a>
+    <a href="about.html"><b>Read</b></a>
+    <a href="gallery.html"><b>Gallery</b></a>
+    <a href="gift.html"><b>Gift</b></a>
+    <a href="march8.html"><b>8 March</b></a>
+</header>
+
+<section class="march-hero">
+    <h1 class="march-title">8 March obviously is not a peak day like 6 March, but anyway I said in message
+        you as a woman in the lead of all others, and all other women, you all deserve respect, kindness, and care, because it is only that brightens our life.
+    </h1>
+    <p class="march-subtitle">
+        Today is for strong, soft, smart, caring, dangerous, loving women and one woman that can't ride a bicycle
+        and somehow you are all of them at the same time.💐
+    </p>
+</section>
+
+<section class="march-content">
+    <div class="march-card" id="content">
+        <h2 id="question">As I identify myself Marat, you have to receive gift from me for sure, do you really want it?
+            (press some no's because meaning of the code is that)
+        </h2>
+
+        <div class="button-row">
+            <button id="yesButton">YES</button>
+            <button id="noButton">NO</button>
+        </div>
+
+        <p id="message" class="message"></p>
+    </div>
+</section>
+
+<script>
+    let noClickCount = 0;
+
+    const yesButton = document.getElementById("yesButton");
+    const noButton = document.getElementById("noButton");
+    const question = document.getElementById("question");
+    const message = document.getElementById("message");
+
+    noButton.addEventListener("click", function () {
+        noClickCount++;
+
+        if (noClickCount === 1) {
+            yesButton.style.transform = "scale(1.1)";
+            message.innerText = "Hmm? Think again, Are u sure that u don't want?";
+        } else if (noClickCount === 2) {
+            yesButton.style.transform = "scale(1.2)";
+            noButton.style.transform = "scale(0.9)";
+            message.innerText = "Are you reallyy sureee?";
+        } else if (noClickCount === 3) {
+            yesButton.style.transform = "scale(1.35)";
+            noButton.style.transform = "scale(0.8)";
+            message.innerText = "This decision is under review by Marat.";
+        } else if (noClickCount === 4) {
+            noButton.style.position = "absolute";
+            noButton.style.left = Math.random() * (window.innerWidth - 120) + "px";
+            noButton.style.top = Math.random() * (window.innerHeight - 70) + "px";
+            message.innerText = "Oh, now the NO button goes awayyy";
+        } else if (noClickCount >= 5 && noClickCount < 10) {
+            noButton.style.position = "absolute";
+            noButton.style.left = Math.random() * (window.innerWidth - 120) + "px";
+            noButton.style.top = Math.random() * (window.innerHeight - 70) + "px";
+            message.innerText = "Running away will not help, by the way";
+        } else if (noClickCount >= 10) {
+            noButton.style.position = "absolute";
+            noButton.style.left = Math.random() * (window.innerWidth - 120) + "px";
+            noButton.style.top = Math.random() * (window.innerHeight - 70) + "px";
+            message.innerText = "At this point even the button knows the answer is YES.";
+        }
+    });
+
+    yesButton.addEventListener("click", function () {
+        question.innerText = "Knew it(neter uzsuzem he?) Happy Women’s Day again, my dear.";
+        message.innerText = "You deserve peace, love, respect, and every beautiful thing in this world. And most important, now after 3 month please send that address to this number +420 774 879 474, and tomorrow Shaxta Baba(me) will send your gift. It is not request by the way, you clicked yes button, you have to be fair. I don't want any other words";
+
+        yesButton.style.display = "none";
+        noButton.style.display = "none";
+
+        for (let i = 0; i < 40; i++) {
+            const heart = document.createElement("div");
+            heart.className = "heart";
+            heart.style.left = Math.random() * window.innerWidth + "px";
+            heart.style.animationDuration = Math.random() * 2 + 3 + "s";
+            heart.style.animationDelay = Math.random() * 2 + "s";
+            document.body.appendChild(heart);
+        }
+    });
+</script>
+
+</body>
+</html>

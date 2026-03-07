@@ -1,0 +1,151 @@
+body {
+    margin: 0;
+    background-color: rgba(249, 199, 208, 0.862);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.topbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 32px;
+    background: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.topbar a {
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #333;
+    padding: 8px 16px;
+    border-radius: 999px;
+    line-height: 1;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.topbar a:hover {
+    background: rgba(249, 199, 208, 0.8);
+    transform: translateY(-1px);
+}
+
+.march-hero {
+    text-align: center;
+    padding: 80px 20px 30px;
+}
+
+.march-title {
+    font-size: 30px;
+    color: rgb(43, 43, 43);
+    margin-bottom: 18px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.march-subtitle {
+    font-size: 17px;
+    color: #444;
+    max-width: 760px;
+    margin: 0 auto;
+    line-height: 1.7;
+    font-weight: 300;
+}
+
+.march-content {
+    padding: 30px 20px 80px;
+    display: flex;
+    justify-content: center;
+}
+
+.march-card {
+    width: min(760px, 92%);
+    background: rgba(255, 255, 255, 0.72);
+    border: 1.5px solid rgba(249, 199, 208, 0.9);
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    padding: 40px 28px;
+    text-align: center;
+    position: relative;
+}
+
+#question {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 25px;
+    color: #2f2f2f;
+    margin-bottom: 28px;
+}
+
+.button-row {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+#yesButton,
+#noButton {
+    font-size: 18px;
+    border-radius: 999px;
+    padding: 14px 26px;
+    border: none;
+    cursor: pointer;
+    transition: 0.25s ease;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+#yesButton {
+    background-color: #e6dccf;
+    color: #3a3a3a;
+}
+
+#noButton {
+    background-color: #3a3a3a;
+    color: #f5ece2;
+}
+
+#yesButton:hover,
+#noButton:hover {
+    transform: translateY(-2px);
+}
+
+.message {
+    margin-top: 16px;
+    min-height: 28px;
+    color: #555;
+    font-size: 16px;
+}
+
+.heart {
+    position: fixed;
+    top: -100px;
+    width: 90px;
+    height: 90px;
+    pointer-events: none;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 29.6"><path fill="%23ff4d6d" d="M16 29.6c-1-.6-21-12.6-16-20C5.7 5.6 10.3 4 16 11c5.7-7 10.3-5.4 16-2.6 5 7.4-15 19.6-16 20z"/></svg>');
+    background-repeat: no-repeat;
+    background-size: contain;
+    animation: fall linear infinite;
+    z-index: 999;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-120px) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(110vh) rotate(180deg);
+        opacity: 0.9;
+    }
+}
